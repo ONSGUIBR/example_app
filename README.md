@@ -28,4 +28,8 @@ npm start dev
 
 ## Walkthrough (Folders)
 
-- models folder: is where the database schema is located
+- models: This is where the database schema is located
+- node_models: No need to worry about this, this folder is where all the package we installed using "npm install"
+- params: The link to the database.
+- public: Where all the images, stylesheets and scripts are located
+    # asoda
