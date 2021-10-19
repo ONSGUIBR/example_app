@@ -1,7 +1,7 @@
-var express = require("express");
+var express = require("express"); //backend
 var path = require("path");
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
+var mongoose = require("mongoose"); //database
+var bodyParser = require("body-parser");  //get data from the website
 var cookieParser = require("cookie-parser");
 var passport = require("passport");
 var session = require("express-session");

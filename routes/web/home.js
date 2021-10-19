@@ -43,7 +43,7 @@ router.get("/profile", function (req, res) {
       if(err) console.log(err);
       res.render("home/profile",{reservations: data});
    });
-   
+
 });
 
 router.post("/book", function (req, res, next) {
@@ -106,8 +106,8 @@ router.post("/signup", function (req, res, next) {
 
    User.find({$or: [{email: email},{A_id : A_id}]}, function (err, user) {
       if (err) {
-         console.log("Error when creating new user in sign up") 
-         return next(err); 
+         console.log("Error when creating new user in sign up")
+         return next(err);
       }
       if (user[0]){
          req.flash("error", "There's already an account with this email or this id");

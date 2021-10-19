@@ -1,3 +1,5 @@
+//This is the script to show informations on the profile page
+
 $(document).on('click', '#cancel-btn', function (){
 
     const selected_room_id = $(this).parents(".card").find("#room-id").text();
@@ -24,7 +26,7 @@ $(document).on('click', '#cancel-btn', function (){
         const new_msg = "Canceling the following reservation: \n"
         const id_msg = room
         const cap_msg = cap + "\n"
-        const date_msg = date 
+        const date_msg = date
 
         return new_msg + id_msg + " " + cap_msg + date_msg
     }

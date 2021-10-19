@@ -13,7 +13,7 @@ $(function(){
 
 $( ".card" ).hover(
     function() {
-      $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+      $(this).addClass('shadow-lg').css('cursor', 'pointer');
     }, function() {
       $(this).removeClass('shadow-lg');
     }
@@ -33,7 +33,7 @@ $("#search-btn").click(function(){
       }
 
     }
-      
+
   });
 });
 
@@ -65,7 +65,7 @@ $(document).on('click', '#reserve-btn', function (){
   var selected_end_AMPM = selected_time.slice(-3).replace(' ','');;
 
 
-  function fixtime (t1, t2){
+  function fixtime (t1, t2){  //correct time format
     if (t2 == "PM"){
       if (t1 == 12){
         return t1.toString();
@@ -87,7 +87,7 @@ $(document).on('click', '#reserve-btn', function (){
     }
   }
 
-  function fixdate (dt1){
+  function fixdate (dt1){    //correct date format
     if (parseInt(dt1)>9){
       return dt1;
     }
@@ -99,7 +99,7 @@ $(document).on('click', '#reserve-btn', function (){
   const start_time =  year +'-'+ fixdate(month) + "-" + fixdate(day)+ "T" + fixtime(parseInt(selected_start_hr) , selected_start_AMPM) + ":00:00";
   const end_time =  year +'-'+ fixdate(month) + "-" + fixdate(day)+ "T" + fixtime(parseInt(selected_end_hr) , selected_end_AMPM) + ":00:00";
 
-  function alertmsg (room, cap, date) {
+  function alertmsg (room, cap, date) {     //alert message
     const new_msg = "Booking the following reservation: \n";
     const id_msg = room[0] + " " + room[1];
     const cap_msg = cap[0] + " " + cap[1] + "\n";
@@ -111,7 +111,7 @@ $(document).on('click', '#reserve-btn', function (){
 
   var book_msg = alertmsg (selected_room_id, selected_cap, selected_time);
 
-  if (confirm(book_msg)){
+  if (confirm(book_msg)){     // confirm dialog box message
     $.post("/book", {
       obj_id : selected_obj_id[0],
       room_Id : selected_room_id[1],
@@ -129,20 +129,3 @@ $(document).on('click', '#reserve-btn', function (){
 
 
 });
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
