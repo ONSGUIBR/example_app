@@ -34,7 +34,7 @@ npm start dev
 - public: Where all the images, stylesheets and scripts are located
     - images: images
     - stylesheets: css
-    - scripts: ajax scripts
+    - js: ajax scripts (ignore fullcalendar folder)
 - routes: This is where most of the backend codes is located
     - api: No need to worry about this folder
     - web: This is where we do most of the back-end stuff (update database and link routing)
