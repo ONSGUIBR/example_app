@@ -1,0 +1,77 @@
+<%- include('../_partial/_header'); -%>
+
+<!-- Load customized css -->
+<link rel="stylesheet" href="stylesheets/book.css"> 
+
+
+<div class="container" id="dropdown-menus">
+    <div id="dropdown-btn">
+        <div class="dropdown div-inline">
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Location
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" >Paul Galvin Library</a>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <div id="dropdown-btn">
+        <div class="dropdown div-inline">
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Capacity
+            </button>
+            <div class="dropdown-menu" id="cat-selection">
+                    <a class="dropdown-item" >1</a>
+                    <a class="dropdown-item" >2-4</a>
+                    <a class="dropdown-item" >4-8</a>
+                    <a class="dropdown-item" >8-12</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id ="submit-selection">
+            
+            <button id="search-btn" class="btn btn-lg btn-secondary" value="selection">Search</button>
+            
+
+    </div>
+
+
+</div>
+
+<div class="container" id='rooms-container'>
+    <ul id="rooms-list">
+        <span  style="display: none;" id="user-id"><%= currentUser.A_id %> </span>
+        <% rooms.forEach(function(room, index) { %>
+            <% if(room.room_avai) { %>
+            <div class="card w-75" id="individual-room">
+                <div>   
+                        <span  style="display: none;" id="room-obj-id"><%= room._id %></span>
+                        <span  id="room-id">Room <%= room.room_Id %> </span>
+                        &nbsp; &nbsp; &nbsp; <span style="display:inline; color:#969FAA;" id="room-cap">Capacity <%= room.room_cap %></span>
+                        &nbsp;&nbsp; &nbsp; <span id="room-time"><%= room.room_start.toLocaleString().replace(',',' '); %>-<%= room.room_end.toLocaleTimeString(); %> </span>
+                </div>
+                <div>
+                    <span  class="nowrap" id="reserve-prompt">
+                        <a id ="reserve-btn">Reserve</a>
+                    </span>
+                </div>    
+                    
+            </div>
+            <% } %>
+            
+        <% }) %>
+    </ul>
+    
+</div>
+
+
+<script type="text/javascript" src="js/book.js"></script>
+
+
+<%- include ('../_partial/_footer'); -%>

@@ -1,0 +1,127 @@
+#dropdown-menus{
+    width:80%;
+    padding-top: 3%;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#dropdown-btn, #submit-selection{
+    display:inline-block;
+    width: 20%;
+
+}
+.div-inline{
+    padding:5%;
+    width: 100%;
+}
+
+.btn-lg{
+    background-color: white;
+    width: 100%;
+    color:#969FAA;
+}
+
+#submit-selection .btn-lg{
+    background-color: white;
+    width: 80%;
+    color:#969FAA;
+}
+
+#rooms-container{
+    padding-bottom: 2%;
+}
+
+.dropdown-menu {
+    padding:5%;
+    min-width: 0;
+    width: 90%;
+}
+#rooms-list{
+    margin: 2% auto;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align:center;
+    
+}
+
+#individial-room{
+    margin-bottom: 2%;
+    text-align: center;
+    
+}
+
+.card{
+    padding:2%; 
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#reserve-prompt{
+    margin: 3em 0;
+}
+
+#reserve-btn{
+    
+    
+    text-align: center;
+    text-decoration:none;
+    border-radius: 5px;
+    background-color:#47525E;
+    color: white;
+}
+
+.nowrap {
+    white-space: nowrap ;
+  }
+  @media (max-width: 850px) {
+    ul{
+        width:100%;
+    }
+    .btn-lg{
+        font-size:14px;
+    }
+    .card{
+        font-size:14px;
+    }
+
+    #room-id{
+        font-size: 16px;
+    }
+    #reserve-btn{
+        font-size: 14px;
+        padding: 5% 10%;
+    }
+    
+}
+
+@media (min-width: 850px) {
+    ul{
+        width:80%;
+    }
+    .btn-lg{
+        font-size:18px;
+    }
+    .card{
+        font-size:16px;
+    }
+
+    #reserve-btn{
+        font-size: 18px;
+        padding: 10% 13%;
+        
+    }
+    #room-id{
+        font-size: 20px;
+    }
+    
+
+}

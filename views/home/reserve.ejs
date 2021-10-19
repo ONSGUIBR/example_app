@@ -1,0 +1,57 @@
+<%- include('../_partial/_header'); -%>
+<!-- Load customized css -->
+<link rel="stylesheet" href="stylesheets/reserve.css"> 
+
+
+<div class="container" id="res-floor-plan-info">
+    <div style="padding-top:2%;">
+        <h2>
+            Floor Plan
+        </h2>
+    </div>
+    <br>
+    <div id="floor-plan-info">
+        <div id="floor-plan-image">
+                <img src="images/floorplan_lower.png"  >    
+        </div>
+
+        <div id="floor-plan-image">
+                <img src="images/floorplan_upper.png"  >    
+        </div>
+
+        
+    </div>
+    
+    <div style="padding-top:3%;">
+        <h2>
+            Room Types
+        </h2>
+    </div>
+    
+    <div id="room-info">
+        
+        <div id="single-room-info">
+            <h5>Individual Study Room</h5>
+            <div id="room-image">
+                <img src="images/room_A.png"  >    
+            </div>
+        </div>
+        <div id="single-room-info">
+            <h5>Group Study Room</h5>
+            <div id="room-image">
+                    <img  src="https://live.staticflickr.com/2748/4416736941_3dcc15b98f_b.jpg"  >    
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div id="avail-prompt">
+        <a id ="avail-btn" href="/book">Start Booking!</a>
+    </div>
+
+    
+
+</div>
+
+<%- include ('../_partial/_footer'); -%>

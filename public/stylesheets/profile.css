@@ -1,0 +1,157 @@
+#profile-container{
+    margin-top:5%;
+    width:100%;
+    text-align: center;
+
+}
+
+h1{
+    color:#47525E;
+}
+
+
+#display-info{
+    padding: 2%;
+    font-size:20px;
+    width:300px;
+    margin: 5% auto;
+    color:#8190A5;
+}
+
+#sub-info{
+    text-align:justify;
+    overflow: hidden;
+    white-space: nowrap;
+    padding:1%;
+   
+}
+
+
+#sub-info i{
+    margin-left: auto; 
+    margin-right: 10%;
+}
+
+#current-res-banner{
+    margin-top: 5%;
+    background-color: white;
+    text-align: center;
+    color: #969FAA;
+    margin: 5% auto;
+    padding:1%;
+    min-width:500px;
+
+
+}
+#individual-res{
+    overflow: hidden;
+    white-space: nowrap;
+    padding:2% 2%;
+    text-align:center;
+}
+
+
+
+#banner-title{
+    color:#8190A5;
+    padding:1%;
+}
+
+
+#res-list{
+    margin: 2% auto;
+}
+
+
+
+ul {
+    
+    list-style-type: none;
+    padding: 0;
+    text-align:center;
+    
+}
+
+#individial-res{
+    margin-bottom: 2%;
+    text-align: center;
+    
+}
+
+.card{
+    padding:2%; 
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#cancel-prompt{
+    margin: 2% 0;
+}
+
+#cancel-btn{
+    
+    
+    text-align: center;
+    text-decoration:none;
+    border-radius: 5px;
+    background-color:#47525E;
+    color: white;
+}
+
+.nowrap {
+    white-space: nowrap ;
+  }
+  @media (max-width: 850px) {
+    #current-res-banner{
+        width:90%;
+    }
+    .card{
+        width:95% !important;
+    }
+    .btn-lg{
+        font-size:14px;
+    }
+    .card{
+        font-size:14px;
+    }
+    #cancel-btn{
+        padding: 5% 10%;
+    }
+    #room-id{
+        font-size: 16px;
+    }
+    #cancel-btn{
+        font-size: 14px;
+    }
+    
+}
+
+@media (min-width: 850px) {
+    #current-res-banner{
+        width:75%;
+    }
+    #cancel-btn{
+        padding: 10% 15%;
+    }
+    .card{
+        width:80%;
+    }
+    .btn-lg{
+        font-size:18px;
+    }
+    .card{
+        font-size:16px;
+    }
+
+    #cancel-btn{
+        font-size: 18px;
+    }
+    #room-id{
+        font-size: 20px;
+    }
+    
+
+}

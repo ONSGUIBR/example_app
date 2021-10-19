@@ -1,0 +1,69 @@
+<%- include('../_partial/_header'); -%>
+
+<!-- Load customized css -->
+<link rel="stylesheet" href="stylesheets/profile.css"> 
+
+<div class="container" id="profile-container">
+    <h1>Hello <span><%= currentUser.First_Name %>,</span></h1>
+
+    <div id="display-info">
+        <div id="sub-info">
+            <i class="far fa-user fa-fw"></i>
+            <span><%= currentUser.First_Name %> <%= currentUser.Last_Name %></span>
+        </div>
+        <div id="sub-info">
+
+            <i class="far fa-envelope fa-fw"></i>
+            <span ><%= currentUser.email %></span>
+        </div>
+        <div id="sub-info">
+            <i class="far fa-id-card fa-fw"></i>
+            <span id ="user-id"><%= currentUser.A_id %></span>
+        </div>
+    </div>
+    <div id="current-res-banner">
+        <span id="banner-title"> 
+            <h4>
+                Upcoming Reservation
+            </h4>         
+        </span>
+
+        <ul id="res-list">
+            <% reservations.forEach(function(res, index) { %>
+                
+                <div class="card w-75" id="individual-res">
+                    <div>   
+                            <span  style="display: none;" id="room-obj-id"><%= res._id%> </span>
+                            <span  id="room-id">Room <%= res.room_Id %> </span>
+                            &nbsp; &nbsp; &nbsp; <span style="display:inline; color:#969FAA;" id="room-cap" >Capacity <%= res.room_cap %></span>
+                            &nbsp;&nbsp; &nbsp; <span id="room-date" ><%= res.room_start.toLocaleString().replace(',',' '); %>-<%= res.room_end.toLocaleTimeString(); %> </span>
+                            
+                    </div>
+                    <div>
+                        <span  class="nowrap" id="cancel-prompt">
+                            <a id ="cancel-btn">Cancel</a>
+                        </span>
+                    </div>    
+                        
+                </div>
+                
+            <% }) %>
+        </ul>
+        
+        
+
+    </div>
+
+    <!-- <span  class="nowrap" id="cancel-prompt">
+        <a id ="cancel-btn">Cancel</a>
+    </span> -->
+    
+    
+
+    
+
+</div>
+
+<script type="text/javascript" src="js/profile.js"></script>
+
+<%- include ('../_partial/_footer'); -%>

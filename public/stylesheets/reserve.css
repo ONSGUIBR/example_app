@@ -1,0 +1,71 @@
+#res-floor-plan-info{
+    margin:3% auto;
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+
+}
+
+h2{
+    color: #47525E;
+}
+
+#room-info,#floor-plan-info{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+@media (max-width: 700px) {
+    #room-info,#floor-plan-info{
+        flex-direction: column;
+    }
+
+    #single-room-info, #floor-plan-image{
+        padding-bottom:5%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    #room-info,#floor-plan-info{
+        flex-direction: row;
+    }
+    
+    #single-room-info, #floor-plan-image{
+        padding-bottom:5%;
+        width: 50%;
+    }
+}
+
+
+
+
+#floor-plan-info img, #room-info img{
+    width:100%;
+    height:auto;
+    padding:1em;
+}
+
+
+
+
+
+
+#avail-prompt{
+    margin-bottom: 5%;
+}
+
+
+#avail-btn{
+    font-size: 20px;
+    padding: 2% 5%;
+    text-align: center;
+    text-decoration:none;
+    border-radius: 5px;
+    background-color:#47525E;
+    color: white;
+}
+
