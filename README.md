@@ -25,3 +25,7 @@ And to run this app
 ```
 npm start dev
 ```
+
+## Walkthrough (Folders)
+
+- models folder: is where the database schema is located
