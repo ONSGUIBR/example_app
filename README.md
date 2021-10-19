@@ -32,4 +32,12 @@ npm start dev
 - node_models: No need to worry about this, this folder is where all the package we installed using "npm install"
 - params: The link to the database.
 - public: Where all the images, stylesheets and scripts are located
-    - images 
+    - images: images
+    - stylesheets: css
+    - scripts: ajax scripts
+- routes: This is where most of the backend codes is located
+    - api: No need to worry about this folder
+    - web: This is where we do most of the back-end stuff (update database and link routing)
+- views: Front-end files (EJS)
+- app.js: This is the main js file where we initialize the web app
+- package.json: List of all the packages used to build this web app
